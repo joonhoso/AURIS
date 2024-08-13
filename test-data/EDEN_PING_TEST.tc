@@ -1,0 +1,39 @@
+[ SendRqst
+    TCRequest
+      { _tcReqRequestID = RequestID 0
+      , _tcReqName = "S2KTC096"
+      , _tcReqDescription = "TC(17,1)"
+      , _tcReqSource = "TC-TAB"
+      , _tcReqReleaseTime = Nothing
+      , _tcReqVerifications =
+          Verification
+            { _verRelease = StRDisabled
+            , _verGroundReception = StGExpected
+            , _verGroundTransmission = StGExpected
+            , _verGroundOBR = StGDisabled
+            , _verTMAcceptance = StTmExpected
+            , _verTMStart = StTmExpected
+            , _verTMProgress = []
+            , _verTMComplete = StTmExpected
+            , _verStatus = VerifStatNominal
+            }
+      , _tcReqSCID = SCID 0
+      , _tcReqVCID = VCID 0
+      , _tcReqPayload =
+          TCCommand
+            { _tcReqMAPID = MAPID 1
+            , _tcReqTransMode = BD
+            , _tcDestination = DestEden (IfEden 1) (Space ProtLevelPacket)
+            , _tcWrapInISL = Nothing
+            , _tcSSC = SSC 0
+            , _tcReqPacket =
+                TCPacket
+                  { _tcpAPID = APID 28
+                  , _tcpType = PUSType 17
+                  , _tcpSubType = PUSSubType 1
+                  , _tcpSourceID = IsSrcIDC (SourceIDC 0)
+                  , _tcpParams = ExpandedParameterList Empty
+                  }
+            }
+      }
+]
